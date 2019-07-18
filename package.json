@@ -1,0 +1,19 @@
+{
+  "name": "common-util-teamjw",
+  "version": "1.0.0",
+  "description": "this is common util for node js by teamjw",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/summsu84/node-common-util.git"
+  },
+  "author": "teamjw-summsu84",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/summsu84/node-common-util/issues"
+  },
+  "homepage": "https://github.com/summsu84/node-common-util#readme"
+}
