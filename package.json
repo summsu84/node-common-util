@@ -1,7 +1,7 @@
 {
   "name": "common-util-teamjw",
-  "version": "1.0.0",
-  "description": "this is common util for node js by teamjw",
+  "version": "1.0.1",
+  "description": "this is common util for node js by teamjw (test version)",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
