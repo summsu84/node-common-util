@@ -10,7 +10,7 @@ This is just designed to help to handle some jobs related to string or date.
 This module is handle string object like inserting value at specific position, replace text, remove space, or etc.
 
 ```js
-const stringUtil = require('node-common-util-teamjw').getStringUtil;
+const stringUtil = require('common-util-teamjw').StringUtil;
 
 ## removeSpace
 ## -> This function is remove space of string object
@@ -40,7 +40,7 @@ console.log(stringUtil.concatString('hello', 'k'))
 This module is handle date, for example, coverting date format, check date, getting tomorrow, or etc.
 
 ```js
-const dateUtil = require('node-common-util-teamjw').getDateUtil;
+const dateUtil = require('common-util-teamjw').DateUtil;
 
 ## getTomorrow
 ## -> This function is to get tomorrow date object
