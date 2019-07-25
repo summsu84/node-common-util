@@ -10,7 +10,7 @@ This is just designed to help to handle some jobs related to string or date.
 This module is handle string object like inserting value at specific position, replace text, remove space, or etc.
 
 ```js
-const stringUtil = require('./lib/string-util');
+const stringUtil = require('node-common-util-teamjw').getStringUtil;
 
 ## removeSpace
 ## -> This function is remove space of string object
@@ -30,7 +30,7 @@ console.log(stringUtil.replaceText('hello', 'l', 'z'));
 ## -> This function is append stringValue to stringObject
 
 console.log(stringUtil.concatString('hello', 'k'))
-
+```
 
 ---
 
@@ -40,28 +40,49 @@ console.log(stringUtil.concatString('hello', 'k'))
 This module is handle date, for example, coverting date format, check date, getting tomorrow, or etc.
 
 ```js
-const dateUtil = require('./lib/date-util');
+const dateUtil = require('node-common-util-teamjw').getDateUtil;
 
-## removeSpace
-## -> This function is remove space of string object
-console.log(stringUtil.removeSpace("hello world. This is test"));
-// landRegId, tempRegId, stnId code can be found on KMA's web site.
-const serviceKey = '[Input Middle Forecast KMA Open API Key]';
+## getTomorrow
+## -> This function is to get tomorrow date object
 
-/**
-*  params
-*  serviceKey : serviceKey,
-*  type : service Type, (0 : forecast request, 1 : middle forecast request)
-*  success callback
-*  error callback
-*/
-KmaHelper.requestWeatherRequest(serviceKey, 1, options, (code, result) =>{
-    // This function is success callback which you need to customize.
-    console.log(code, result);
-}, (err,code, msg) => {
-     // This function is error callback which you need to customize.
-    console.log(err);
-} );
+Date tomorrow = dateUtil.getTomorrow();
+
+## convertYYYY_MM_DD
+## -> This function is to covert date object to 'YYYY-MM-DD' formatted string object.
+
+String convDate = dateUtil.convertYYYY_MM_DD(new Date());
+
+## convertYYYYMMDD
+## -> This function is to covert date object to 'YYYYMMDD' formatted string object.
+
+String convDate = dateUtil.convertYYYYMMDD(new Date());
+
+## convertYYYYMMDDHHMMSS
+## -> This function is to covert date object to 'YYYYMMDDHHMMSS' formatted string object.
+
+String convDate = dateUtil.convertYYYYMMDDHHMMSS(new Date());
+
+
+## isTodayDateFromStringValue
+## -> This function is to check weather if string of date is today or not. If that value is today, it will return true value, otherwise, it will return false value.
+
+const isToday = dateUtil.isTodayDateFromStringValue('20190724');
+
+## getYearFromDate
+## -> This function is to get string year value from date object.
+
+const strHour = dateUtil.getYearFromDate(new Date());
+
+## getMonthFromDate
+## -> This function is to get string month value from date object.
+
+const strMonth = dateUtil.getMonthFromDate(new Date());
+
+## getDayFromDate
+## -> This function is to get string day value from date object.
+
+const strDay = dateUtil.getDayFromDate(new Date());
+
 ```
 
 
